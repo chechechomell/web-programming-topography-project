@@ -1,0 +1,53 @@
+/*25101198 체 아담 하리스 빈 체 모하마드 슈크리*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.lang-switch button {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.lang-switch button:hover {
+    background: #e2e8f0;
+}
+
+.containers {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 60px);
+}
+
+.sidebar {
+    width: 300px;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-right: 1px solid #dee2e6;
+}
+
+#map {
+    flex: 1;
+    height: 100%;
+}

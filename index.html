@@ -1,0 +1,48 @@
+<!--25101198 체 아담 하리스 빈 체 모하마드 슈크리-->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지형 등고선 및 분수계 기반 대화형 지역 탐색</title>
+    <!--css leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 data-i18n="title">지형 등고선 및 분수계 기반 대화형 지역 탐색</h1>
+        <div class="lang-switch">
+            <button onclick="setLanguage('ko')">한국어</button>
+            <button onclick="setLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <div class="containers">
+        <!--for sidebar-->
+         <aside class="sidebar">
+            <h2 data-i18n="layerControl">지형 레이어 제어</h2>
+            <label>
+                <input type="checkbox" id="toggleContour" checked> <span data-i18n="contourLabel">등고선 레이어 표시</span>
+            </label>
+            <hr>
+            <h2 data-i18n="regionInfo">지역 정보</h2>
+            <div id="infoPanel" data-i18n="infoPrompt">지도를 클릭하여 표고 및 위치 정보를 확인하세요.</div>
+        </aside>
+
+        <!--main view of the map-->
+         <main id="map"></main>
+    </div>
+    
+    <!--js leaflet and scripts-->
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+     <script src="js/map.js"></script>
+     <script src="js/main.js"></script>
+     <script src="js/lang.js"></script>
+</body>
+
+</html>
+
