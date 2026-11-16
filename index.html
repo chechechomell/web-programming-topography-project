@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>지형 등고선 및 분수계 기반 대화형 지역 탐색</title>
+    <title>지형 등고선 기반 대화형 지역 탐색</title>
     <!--css leaflet-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="styles/style.css">
@@ -14,35 +14,42 @@
 
 <body>
     <header>
-        <h1 data-i18n="title">지형 등고선 및 분수계 기반 대화형 지역 탐색</h1>
+        <h1 data-i18n="title">지형 등고선 & 지역 탐색 플랫폼</h1>
+        <!--change language button-->
         <div class="lang-switch">
-            <button onclick="setLanguage('ko')">한국어</button>
-            <button onclick="setLanguage('en')">English</button>
+            <button id="btn-ko" class="active" onclick="setLanguage('ko')">한국어</button>
+            <button id="btn-en" onclick="setLanguage('en')">English</button>
         </div>
     </header>
 
     <div class="containers">
-        <!--for sidebar-->
-         <aside class="sidebar">
-            <h2 data-i18n="layerControl">지형 레이어 제어</h2>
-            <label>
-                <input type="checkbox" id="toggleContour" checked> <span data-i18n="contourLabel">등고선 레이어 표시</span>
-            </label>
-            <hr>
-            <h2 data-i18n="regionInfo">지역 정보</h2>
-            <div id="infoPanel" data-i18n="infoPrompt">지도를 클릭하여 표고 및 위치 정보를 확인하세요.</div>
+        <!--sidebar-->
+        <aside class="sidebar">
+            <div class="control-card">
+                <h2 data-i18n="layerControl">지형 레이어 제어</h2>
+                <label class="toggle-row">
+                    <span data-i18n="contourLabel">등고선 레이어 표시</span>
+                    <div class="switch">
+                        <input type="checkbox" id="toggleContour" checked>
+                        <span class="slider"></span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="control-card">
+                <h2 data-i18n="regionInfo">지역 정보</h2>
+                <div id="infoPanel" data-i18n="infoPrompt">지도를 클릭하여 표고 및 위치 정보를 확인하세요.</div>
+            </div>
         </aside>
 
-        <!--main view of the map-->
-         <main id="map"></main>
+        <main id="map"></main>
     </div>
     
-    <!--js leaflet and scripts-->
-     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-     <script src="js/map.js"></script>
-     <script src="js/main.js"></script>
-     <script src="js/lang.js"></script>
+    <!--scriptsss-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
 </body>
 
 </html>
-
